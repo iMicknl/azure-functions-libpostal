@@ -1,6 +1,9 @@
 [![Deploy to Azure](https://aka.ms/deploytoazurebutton)][deployment-url]
+[![Deploy to Azure Gov](https://aka.ms/deploytoazuregovbutton)][deployment-url-gov]
 
 [deployment-url]: https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FiMicknl%2Fazure-functions-libpostal%2Fmain%2Fdeploy%2Faz_function_deployment.json
+
+[deployment-url-gov]: https://portal.azure.us/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FiMicknl%2Fazure-functions-libpostal%2Fmain%2Fdeploy%2Faz_function_deployment.json
 
 
 # azure-functions-libpostal
