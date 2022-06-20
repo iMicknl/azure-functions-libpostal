@@ -17,7 +17,8 @@ You can easily deploy this Azure Function in your own Azure environment, by clic
 
 [![Deploy to Azure](https://aka.ms/deploytoazurebutton)][deployment-url] [![Deploy to Azure Gov](https://aka.ms/deploytoazuregovbutton)][deployment-url-gov]
 
-This will deploy an Azure Function app with a dedicated App Service plan (B3 sku) using the provided Docker container of this project. The project can easily be forked to make code changes and/or infrastructure changes.
+This will deploy an Azure Function app with a dedicated App Service plan (B3 sku) using the published [Docker container on GitHub Container Registry](https://github.com/iMicknl/azure-functions-libpostal/pkgs/container/azure-functions-libpostal). The project can easily be forked to make code changes and/or infrastructure changes.
+
 
 ## Endpoints
 ### /api/ParseAddress (GET/POST)
@@ -167,7 +168,7 @@ or
 }
 ```
 
-## Getting Started with Azure Function
+## Contribute to this repository
 
 #### Project Structure
 The main project folder (<project_root>) can contain the following files:
@@ -186,15 +187,8 @@ Each function has its own code file and binding configuration file ([**function.
 
 #### Developing your Python function using VS Code
 
-This project includes a devcontainer that can be used on GitHub Codespaces or Visual Studio Code with Docker. During first build, it wil compile the Libpostal C module and download all training data.
-
-If you have not already, please checkout our [quickstart](https://aka.ms/azure-functions/python/quickstart) to get you started with Azure Functions developments in Python. 
+This project includes a devcontainer that can be used on GitHub Codespaces or Visual Studio Code with Docker. During first build, it wil compile the Libpostal C module and download all training data. If you have not already, please checkout our [quickstart](https://aka.ms/azure-functions/python/quickstart) to get you started with Azure Functions developments in Python. 
 
 #### Publishing your function app to Azure 
-
-```sh
-docker build --tag imicknl/azurefunctionsimage:v1.0.0 .
-docker run -p 8080:80 -it imicknl/azurefunctionsimage:v1.0.0
-```
 
 For more information on deployment options for Azure Functions, please visit this [guide](https://docs.microsoft.com/en-us/azure/azure-functions/create-first-function-vs-code-python#publish-the-project-to-azure).
