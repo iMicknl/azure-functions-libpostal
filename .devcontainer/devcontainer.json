@@ -13,7 +13,9 @@
 	"extensions": [
 		"ms-azuretools.vscode-azurefunctions",
 		"ms-azuretools.vscode-docker",
-		"ms-python.python"
+		"ms-python.python",
+		"msazurermtools.azurerm-vscode-tools",
+		"ms-azuretools.vscode-bicep"
 	],
 	
 	// Use 'postCreateCommand' to run commands after the container is created.
