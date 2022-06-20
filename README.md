@@ -11,16 +11,27 @@ An Azure Function project which utilizes [libpostal](https://github.com/openvenu
 
 Due to C binding required for Libpostal, we need to [create an Azure Function on Linux using a custom container](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-function-linux-custom-image?tabs=in-process%2Cbash%2Cazure-cli&pivots=programming-language-python). This will require a Premium plan or Dedicated (App Service) plan.
 
+## How to deploy
 
+You can easily deploy this Azure Function in your own Azure environment, by clicking the Deploy to Azure button.
+
+[![Deploy to Azure](https://aka.ms/deploytoazurebutton)][deployment-url] [![Deploy to Azure Gov](https://aka.ms/deploytoazuregovbutton)][deployment-url-gov]
+
+This will deploy an Azure Function app with a dedicated App Service plan (B3 sku) using the provided Docker container of this project. The project can easily be forked to make code changes and/or infrastructure changes.
 
 ## Endpoints
-### /api/ParseAddress
+### /api/ParseAddress (GET/POST)
 **Input**: 
 ```json
 {
 	"address": "Evert van de Beekstraat 354, 1118 CZ Schiphol, Nederland",
 }
 ```
+
+or
+
+```https://[APP_NAME].azurewebsites.net/api/ParseAddress?address=Evert%20van%20de%20Beekstraat%20354,%201118%20CZ%20Schiphol,%20Nederland```
+
 
 **Output**:
 ```json
@@ -33,7 +44,7 @@ Due to C binding required for Libpostal, we need to [create an Azure Function on
 }
 ```
 
-### /api/ParseAddressCognitiveSearch
+### /api/ParseAddressCognitiveSearch (POST)
 
 **Input**:
 ```json
