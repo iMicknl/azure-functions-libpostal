@@ -6,6 +6,28 @@ An Azure Function project which utilizes [libpostal](https://github.com/openvenu
 Due to C binding required for Libpostal, we need to [create an Azure Function on Linux using a custom container](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-function-linux-custom-image?tabs=in-process%2Cbash%2Cazure-cli&pivots=programming-language-python). This will require a Premium plan or Dedicated (App Service) plan.
 
 
+## How to deploy
+
+_At the moment, there is no one-click deployment for this repository._
+
+1. Create a new Function App
+2. Make sure you select Publish: **Docker Container**
+3. For the Plan type, pick Functions Premium or App service plan depending on your requirements.
+4. Deploy your Azure Function!
+5. After deployment, head to your new Azure Function and go to "Deployment Center"
+6. Use the following settings:
+
+| Key                     | Value                                    |
+|-------------------------|------------------------------------------|
+| Container type          | Single Container                         |
+| Registry source         | Private registry                         |
+| Server URL              | https://ghcr.io                          |
+| Username                | (keep empty)                             |
+| Password                | (keep empty)                             |
+| Full Image Name and Tag | imicknl/azure-functions-libpostal:latest |
+
+7. Save and wait until the docker container has been loaded and your app is functional.
+
 ## Endpoints
 ### /api/ParseAddress
 **Input**: 
