@@ -1,9 +1,13 @@
-[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/)
+[![Deploy to Azure](https://aka.ms/deploytoazurebutton)][deployment-url]
+
+[deployment-url]: https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FiMicknl%2Fazure-functions-libpostal%2Fmain%2Fdeploy%2Faz_function_deployment.json
+
 
 # azure-functions-libpostal
 An Azure Function project which utilizes [libpostal](https://github.com/openvenues/libpostal), a C library for parsing and normalizing street addresses. This can be useful for matching address strings with a database, and it can be used with Azure Cognitive Search to split an address over multiple index fields.
 
 Due to C binding required for Libpostal, we need to [create an Azure Function on Linux using a custom container](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-function-linux-custom-image?tabs=in-process%2Cbash%2Cazure-cli&pivots=programming-language-python). This will require a Premium plan or Dedicated (App Service) plan.
+
 
 
 ## Endpoints
