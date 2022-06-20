@@ -192,3 +192,9 @@ This project includes a devcontainer that can be used on GitHub Codespaces or Vi
 #### Publishing your function app to Azure 
 
 For more information on deployment options for Azure Functions, please visit this [guide](https://docs.microsoft.com/en-us/azure/azure-functions/create-first-function-vs-code-python#publish-the-project-to-azure).
+
+
+## License
+
+MIT 
+
