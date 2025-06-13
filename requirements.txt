@@ -1,2 +1,2 @@
-azure-functions==1.21.3
+azure-functions==1.23.0
 postal==1.1.10
