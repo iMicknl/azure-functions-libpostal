@@ -1,2 +1,2 @@
 azure-functions==1.21.3
-postal==1.1.10
+postal==1.1.11
